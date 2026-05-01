@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soft Urbanity — Stay Original. Fit True.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <div id="cur-r"></div>
+
+  <div class="topbar">Limited Releases. Exclusive Drops. Elegance is Now Live.</div>
+
+  <nav>
+    <ul class="nav-left">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#lookbook">Lookbook</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">How to Order</a></li>
+    </ul>
+    <a href="#" class="nav-logo">SOFT URBANITY</a>
+    <div class="nav-right">
+      <a href="https://wa.me/2347014254468" target="_blank">Contact</a>
+      <button class="nav-cart" onclick="openCart()">
+        Bag <span class="badge" id="badge">0</span>
+      </button>
+      <button class="ham" id="ham" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mob-menu" id="mob-menu">
+    <a href="#shop"     onclick="toggleMenu()">Shop</a>
+    <a href="#lookbook" onclick="toggleMenu()">Lookbook</a>
+    <a href="#about"    onclick="toggleMenu()">About</a>
+    <a href="#how"      onclick="toggleMenu()">How to Order</a>
+    <a href="https://wa.me/2347014254468" target="_blank">WhatsApp Us</a>
+  </div>
+
+  <div class="hero">
+    <div class="hero-half">
+      <img src="./hero.jpg" alt=""/>
+    </div>
+    <div class="hero-half">
+      <img src="./hero-1.jpg" alt=""/>
+      <div class="hero-copy">
+        <p class="h-eye">New Collection — 2025</p>
+        <h1 class="h-title">STYLE<br>VIBE<br>REFLECT<em>Stay Original. Fit True.</em></h1>
+        <div class="h-cta">
+          <a href="#shop" class="btn btn-s">Shop Now</a>
+          <a href="#about" class="btn btn-o">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip"><div class="strip-t" id="st"></div></div>
+
+  <section id="shop" class="sec" style="padding-bottom:0">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label rv">The Collection</p>
+        <h2 class="sec-title rv">DESIGNED TO<br>DISRUPT.</h2>
+        <p class="sec-sub rv">Luxury staples for the modern disruptor. This isn't just fashion — it's a statement.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.8rem">
+        <a href="#" class="see-all">View All →</a>
+        <div class="filters">
+          <button class="ft on" onclick="fil('all',this)">All</button>
+          <button class="ft"    onclick="fil('tees',this)">Tees</button>
+          <button class="ft"    onclick="fil('bottoms',this)">Bottoms</button>
+          <button class="ft"    onclick="fil('caps',this)">Caps</button>
+          <button class="ft"    onclick="fil('sets',this)">Sets</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pg" id="pg" style="margin-top:2.5rem"></div>
+  <div class="load-more-wrap">
+    <button id="load-more" onclick="loadMore()">Load More</button>
+  </div>
+
+  <div class="editorial">
+    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1800&q=80" alt=""/>
+    <div class="editorial-copy">
+      <p class="ed-tag rv">Founder's Edit</p>
+      <h2 class="ed-h rv">TIMAH'S<br>PICKS.</h2>
+      <p class="ed-sub rv">Every piece curated by hand. Every drop with intention.</p>
+      <a href="#shop" class="btn btn-s rv" style="width:fit-content">Shop the Edit</a>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label rv">Fresh Drop</p>
+        <h2 class="sec-title rv">NEW ARRIVALS</h2>
+      </div>
+      <a href="#" class="see-all">View All →</a>
+    </div>
+    <div class="pg" id="pg2"></div>
+  </section>
+
+  <section id="lookbook" class="sec" style="padding-bottom:1.5rem">
+    <div class="sec-head" style="margin-bottom:1.5rem">
+      <div>
+        <p class="sec-label rv">Visual</p>
+        <h2 class="sec-title rv">LOOKBOOK</h2>
+      </div>
+    </div>
+  </section>
+  <div class="lb" id="lb"></div>
+
+  <div class="quote-sec">
+    <p class="quote-t rv">"We don't make clothes. We make statements that walk into rooms before you do."</p>
+    <p class="quote-a">— Timah, Founder of Soft Urbanity</p>
+  </div>
+
+  <section class="how" id="how">
+    <div>
+      <p class="sec-label rv">Simple Process</p>
+      <h2 class="sec-title rv">HOW TO ORDER</h2>
+      <p class="sec-sub rv">No complicated checkout. No account needed. Just pick your fit and we handle the rest.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card rv">
+        <div class="how-num">01</div>
+        <div class="how-icon">👕</div>
+        <p class="how-title">PICK YOUR FIT</p>
+        <p class="how-desc">Browse the collection and select the pieces you want. Choose your size before adding to bag.</p>
+      </div>
+      <div class="how-card rv">
+        <div class="how-num">02</div>
+        <div class="how-icon">🛍️</div>
+        <p class="how-title">ADD TO BAG</p>
+        <p class="how-desc">Your items are saved in your bag. Add as many pieces as you want before checking out.</p>
+      </div>
+      <div class="how-card rv">
+        <div class="how-num">03</div>
+        <div class="how-icon">💬</div>
+        <p class="how-title">ORDER ON WHATSAPP</p>
+        <p class="how-desc">Tap "Complete Order" and your items auto-fill in a WhatsApp message. Just add your location.</p>
+      </div>
+      <div class="how-card rv">
+        <div class="how-num">04</div>
+        <div class="how-icon">🚚</div>
+        <p class="how-title">WE DELIVER</p>
+        <p class="how-desc">Confirm your order, make payment, and we'll get your pieces to you. Clean packaging guaranteed.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="two-col" id="about">
+    <div class="two-img rv">
+      <img src="./hero.jpg" alt=""/>
+    </div>
+    <div class="two-body">
+      <p class="sec-label rv">Our Mission</p>
+      <h2 class="sec-title rv">BUILT FOR<br>THE BOLD.</h2>
+      <p class="sec-sub rv" style="margin-bottom:.8rem">Soft Urbanity is a street culture brand born in Ibadan, Nigeria. Founded by Timah — a creative who doesn't just design clothes, she builds brands.</p>
+      <p class="sec-sub rv">Beyond the drops, we help emerging clothing brands find their edge — fabric sourcing, in-house printing, packaging and production strategy.</p>
+      <p class="founder-tag rv">Timah — <strong>Founder & Creative Director</strong></p>
+      <div class="svc-list">
+        <div class="svc rv"><span class="svc-n">01</span><div><p class="svc-t">Material Sourcing</p><p class="svc-d">Quality fabric at the right price. No rookie mistakes on your first run.</p></div></div>
+        <div class="svc rv"><span class="svc-n">02</span><div><p class="svc-t">In-House Printing</p><p class="svc-d">Timah owns the press. Your designs on fabric — exactly how you imagined.</p></div></div>
+        <div class="svc rv"><span class="svc-n">03</span><div><p class="svc-t">Brand Roadmap</p><p class="svc-d">Design direction, production planning and a clear path from idea to product.</p></div></div>
+        <div class="svc rv"><span class="svc-n">04</span><div><p class="svc-t">Packaging Setup</p><p class="svc-d">The right boxes, bags, and hangtags. First impressions close the sale.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-strip">
+    <div>
+      <p class="sec-label rv">Community</p>
+      <h2 class="sec-title rv">AS SEEN ON<br>THE STREETS.</h2>
+      <p class="sec-sub rv">Tag <strong style="color:var(--off)">@softurbanity</strong> to be featured.</p>
+    </div>
+    <div class="social-grid" id="soc-grid"></div>
+  </div>
+
+  <footer>
+    <div class="ft-grid">
+      <div>
+        <p class="ft-name">SOFT URBANITY</p>
+        <p class="ft-p">"Stay Original. Fit True." — Ibadan born, globally worn.</p>
+      </div>
+      <div class="ft-col"><h4>Shop</h4><ul>
+        <li><a href="#shop">All Products</a></li>
+        <li><a href="#shop">Tees</a></li>
+        <li><a href="#shop">Bottoms</a></li>
+        <li><a href="#shop">Caps</a></li>
+        <li><a href="#shop">Sets</a></li>
+      </ul></div>
+      <div class="ft-col"><h4>Brand</h4><ul>
+        <li><a href="#about">About Timah</a></li>
+        <li><a href="#about">Services</a></li>
+        <li><a href="#lookbook">Lookbook</a></li>
+        <li><a href="#how">How to Order</a></li>
+      </ul></div>
+      <div class="ft-col"><h4>Contact</h4><ul>
+        <li><a href="https://wa.me/2347014254468" target="_blank">WhatsApp Us</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2025 Soft Urbanity. All rights reserved.</span>
+      <span>Ibadan, Nigeria 🇳🇬</span>
+    </div>
+  </footer>
+
+  <div class="c-overlay" id="co" onclick="closeCart()"></div>
+  <div class="c-drawer" id="cd">
+    <div class="c-head">
+      <h2>YOUR BAG</h2>
+      <button class="c-close" onclick="closeCart()">×</button>
+    </div>
+    <div class="c-body" id="clist"><p class="c-empty">Your bag is empty.</p></div>
+    <div class="c-foot">
+      <div class="c-total"><span>Subtotal</span><strong id="ctotal">₦0</strong></div>
+      <a href="#" id="wabtn" class="btn-wa" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Complete Order on WhatsApp
+      </a>
+      <p class="c-note">Just add your delivery location in the chat and we'll handle the rest.</p>
+    </div>
+  </div>
+
+  <div class="sz-modal" id="szm">
+    <div class="sz-box">
+      <button class="sz-close" onclick="closeSz()">×</button>
+      <h3>SELECT SIZE</h3>
+      <p class="sz-pname" id="sz-pname"></p>
+      <p class="sz-label">Choose your size</p>
+      <div class="sz-grid" id="sz-grid"></div>
+      <button class="btn btn-s" style="width:100%;padding:.85rem;cursor:none" onclick="confirmAdd()">Add to Bag</button>
+    </div>
+  </div>
+
+  <!-- JS loaded last — DOM is fully ready before any script runs -->
+  <script src="main.js"></script>
+
+</body>
+</html>
